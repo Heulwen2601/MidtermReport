@@ -21,9 +21,9 @@ class CauHoiModelTest extends TestCase
     {
         $noidung = "Truyền thống quý báu nhất của dân tộc Việt Nam được Hồ Chí Minh kế thừa và phát triển là gì?";
         $dokho = 1;
-        $mamonhoc = "841464";
+        $mamonhoc = "503073";
         $machuong = 7;
-        $nguoitao = "3121410422";
+        $nguoitao = "52200028";
         $cauhoi = $this->cauhoimodel->create($noidung, $dokho, $mamonhoc, $machuong, $nguoitao);
         $this->assertNotFalse($cauhoi);
         $macauhoi = mysqli_insert_id($cauhoi);
@@ -42,9 +42,9 @@ class CauHoiModelTest extends TestCase
         $id = 2;
         $noidung = "Hồ Chí Minh thành lập Hội Việt Nam cách mạng thanh niên vào nm nào?";
         $dokho = 3;
-        $mamon = "841059";
+        $mamon = "503005";
         $machuong = 7;
-        $nguoitao = "3121410422";
+        $nguoitao = "52200028";
         $result = $this->cauhoimodel->update($id, $noidung, $dokho, $mamon, $machuong, $nguoitao);
         $this->assertTrue($result);
         $cautraloi = [

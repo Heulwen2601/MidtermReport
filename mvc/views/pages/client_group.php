@@ -60,7 +60,7 @@
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Lập trình Java - NH2023 - HK2 - Nhóm 2</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Cấu trúc dữ liệu và giải thuật - NH2023 - HK2 - Nhóm 2</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body content-side">

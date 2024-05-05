@@ -17801,8 +17801,8 @@ button.bg-muted:focus {
   background-color: #545b62 !important;
 }
 
-.bg-white {
-  background-color: #fff !important;
+.dark-mode .bg-white {
+  background-color: #161920 !important;
 }
 
 a.bg-white:hover, a.bg-white:focus,

@@ -73,7 +73,7 @@ use Masterminds\HTML5;
 $html = <<< 'HERE'
   <html>
   <head>
-    <title>EXAM</title>
+    <title>Test</title>
   </head>
   <body id='foo'>
     <h1>Hello World</h1>

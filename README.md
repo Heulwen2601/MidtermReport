@@ -1,12 +1,17 @@
-# Đồ án Lập trình web và ứng dụng nâng cao
+# Đồ án Lập trình web và ứng dụng
 ### Hướng dẫn cài đặt
 
 Cấu hình thông tin database và đường dẫn trang chủ tại file config.php
 
 ### Tài khoản Admin
 
-- Username: 3121410422
+- Username: 52200028
 - Password: 123456
+
+### Tài khoản Giáo viên
+
+- Username: 222222
+- Password: cntt123
 
 ### Chức năng
 1. Landing page giới thiệu hệ thống

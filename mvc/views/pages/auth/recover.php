@@ -7,8 +7,8 @@
                 <div class="block-content block-content-full px-lg-5 px-xl-6 py-4 py-md-5 py-lg-6 bg-body-extra-light">
                     <!-- Header -->
                     <div class="mb-2 text-center">
-                        <a class="link-fx fw-bold fs-1" href="index.html">
-                            <span class="text-dark">TDTU </span><span class="text-primary">Exam</span>
+                        <a class="link-fx fw-bold fs-1" href="/Quanlythitracnghiem-main/auth/signin">
+                        <span class="text-info">T</span><span class="text-primary">D</span><span class="text-info">T<span class="text-primary">U</span></span><span class="text-dark"> Test</span>
                         </a>
                         <p class="text-uppercase fw-bold fs-sm text-muted">Quên mật khẩu</p>
                     </div>

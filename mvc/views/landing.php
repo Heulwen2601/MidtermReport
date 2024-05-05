@@ -9,7 +9,7 @@
                 <div class="space-x-1 d-flex align-items-center space-x-2 animated zoomInRight">
                     <a class="link-fx fw-bold" href="home">
                         <i class="fa fa-fire text-primary"></i>
-                        <span class="fs-4 text-dual">TDTU </span><span class="fs-4 text-primary">Exam</span>
+                        <span class="fs-4 text-dual">TDTU </span><span class="fs-4 text-primary">Test</span>
                     </a>
                 </div>
                 <div class="space-x-1">
@@ -72,7 +72,7 @@
                                         <p class="text-muted fw-medium mb-4">
                                             Hệ thống hỗ trợ các chức năng như xem lịch giảng dạy, lưu lại thông tin về bài giảng, tài liệu môn học và thiết lập các nhắc nhở. Ngoài ra, bạn có thể tạo các bài thi trắc nghiệm online, lưu lại danh sách điểm danh sinh viên,...
                                         </p>
-                                        <a class="btn btn-alt-primary py-2 px-3 m-1" href="auth/signin" target="_blank">
+                                        <a class="btn btn-alt-primary py-2 px-3 m-1" href="/Quanlythitracnghiem-main/" target="_blank">
                                             <i class="fa fa-arrow-right opacity-50 me-1"></i> Sử dụng ngay
                                         </a>
                                         <a class="btn btn-alt-secondary py-2 px-3 m-1 btn--scroll-to">
@@ -244,10 +244,10 @@
                             <div class="text-center slider-team">
                                 <div class="p-3 invisible" data-toggle="appear" data-class="animated flipInX">
                                     <a class="block block-rounded bg-gd-primary text-center"
-                                        href="https://github.com/transinh085">
+                                        href="https://github.com/NHuy341">
                                         <div class="block-content block-content-full bg-gd-sea">
                                             <img class="img-avatar img-avatar-thumb"
-                                                src="https://github.com/transinh085.png?size=460" alt="">
+                                                src="https://github.com/NHuy341.png?size=460" alt="">
                                         </div>
                                         <div class="block-content block-content-full bg-black-10">
                                             <p class="fw-semibold text-white mb-0">Nguyễn Nhật Huy</p>
@@ -259,10 +259,10 @@
                                 </div>
                                 <div class="p-3 invisible" data-toggle="appear" data-class="animated flipInX">
                                     <a class="block block-rounded bg-gd-primary text-center"
-                                        href="https://github.com/hgbaodev">
+                                        href="https://github.com/itnqhuy">
                                         <div class="block-content block-content-full bg-gd-sea">
                                             <img class="img-avatar img-avatar-thumb"
-                                                src="https://github.com/hgbaodev.png?size=460" alt="">
+                                                src="https://github.com/itnqhuy.png?size=460" alt="">
                                         </div>
                                         <div class="block-content block-content-full bg-black-10">
                                             <p class="fw-semibold text-white mb-0">Nguyễn Quốc Huy</p>
@@ -274,10 +274,10 @@
                                 </div>
                                 <div class="p-3 invisible" data-toggle="appear" data-class="animated flipInX">
                                     <a class="block block-rounded bg-gd-primary text-center"
-                                        href="https://github.com/nhienau">
+                                        href="https://github.com/heulwen2601">
                                         <div class="block-content block-content-full bg-gd-sea">
                                             <img class="img-avatar img-avatar-thumb"
-                                                src="https://github.com/nhienau.png?size=460" alt="">
+                                                src="https://github.com/heulwen2601.png?size=460" alt="">
                                         </div>
                                         <div class="block-content block-content-full bg-black-10">
                                             <p class="fw-semibold text-white mb-0">Lâm Huỳnh Như</p>
@@ -311,7 +311,7 @@
                         data-slides-to-show="1" data-autoplay="false">
                         <div class="py-3">
                             <blockquote class="blockquote">
-                                <p class="px-7 fs-5 text-justify mb-5">"TDTU Exam là một hệ thống hỗ trợ cho các giảng viên khoa Công nghệ Thông tin, được thiết kế bởi các học sinh trong khoa. Đáp ứng đủ những yêu cầu cơ bản mà một giảng viên cần thiết."
+                                <p class="px-7 fs-5 text-justify mb-5">"TDTU Test là một hệ thống hỗ trợ cho các giảng viên khoa Công nghệ Thông tin, được thiết kế bởi các học sinh trong khoa. Đáp ứng đủ những yêu cầu cơ bản mà một giảng viên cần thiết."
                                 </p>
                             </blockquote>
                             <div class="d-flex align-items-center justify-content-center">
@@ -336,7 +336,7 @@
                         </div>
                         <div class="py-3">
                             <blockquote class="blockquote">
-                                <p class="px-7 fs-5 text-justify mb-5">"TDTU Exam đảm bảo an toàn và bảo mật thông tin của người dùng. Tôi rất hài lòng với trải nghiệm của mình khi sử dụng hệ thống này."
+                                <p class="px-7 fs-5 text-justify mb-5">"TDTU Test đảm bảo an toàn và bảo mật thông tin của người dùng. Tôi rất hài lòng với trải nghiệm của mình khi sử dụng hệ thống này."
                                 </p>
                             </blockquote>
                             <div class="d-flex align-items-center justify-content-center">
@@ -349,7 +349,7 @@
                         </div>
                         <div class="py-3">
                             <blockquote class="blockquote">
-                                <p class="px-7 fs-5 text-justify mb-5">Nhờ có TDTU Exam mà tôi đã tiết kiệm được rất nhiều thời gian trong việc quản lý lớp học của mình. Việc soạn bài, tạo các đề thi để cho học sinh thi chưa bao giờ đơn giản đến thế. Đặc biệt các bạn tư vấn và hỗ trợ rất nhiệt tình khi mình gặp vướng mắc.
+                                <p class="px-7 fs-5 text-justify mb-5">Nhờ có TDTU Test mà tôi đã tiết kiệm được rất nhiều thời gian trong việc quản lý lớp học của mình. Việc soạn bài, tạo các đề thi để cho học sinh thi chưa bao giờ đơn giản đến thế. Đặc biệt các bạn tư vấn và hỗ trợ rất nhiệt tình khi mình gặp vướng mắc.
                                 </p>
                             </blockquote>
                             <div class="d-flex align-items-center justify-content-center">

@@ -9,7 +9,7 @@
                     <div class="mb-2 text-center">
                         <div class="link-fx fw-bold fs-1">
                             <!-- <span class="text-dark">Dash</span> -->
-                            <span class="text-primary">TDTU Exam</span>
+                            <span class="text-info">T</span><span class="text-primary">D</span><span class="text-info">T<span class="text-primary">U</span></span><span class="text-dark"> Test</span>
                         </div>
                         <p class="text-uppercase fw-bold fs-sm text-dark">Change password</p>
                         <p class="fw-bold fs-sm text-muted">We will enter password new and comfirm</p>

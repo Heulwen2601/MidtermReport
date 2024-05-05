@@ -14,8 +14,8 @@ class DeThiModelTest extends TestCase
     }
 
     public function testCreate(){
-        $mamonhoc = "841059";
-        $nguoitao = "31214100422";
+        $mamonhoc = "503005";
+        $nguoitao = "522000422";
         $tende = "Đề kiểm tra giữa kỳ 2";
         $thoigianthi = 10;
         $thoigianbatdau = "2023-04-03 12:00:00";
@@ -44,7 +44,7 @@ class DeThiModelTest extends TestCase
 
     public function testUpdate(){
         $made = 2;
-        $mamonhoc = "841059";
+        $mamonhoc = "503005";
         $tende = "Đề kiểm tra cuối kì";
         $thoigianthi = 10;
         $thoigianbatdau = "2025-06-03 10:00:00";

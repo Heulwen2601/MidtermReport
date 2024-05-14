@@ -1,4 +1,4 @@
-<div class="bg-image" style="background-image: url('./public/media/photos/photo22@2x.jpg');">
+<div class="bg-image" style="background-image: url('./public/media/photos/photo1@2x.jpg');">
     <div class="row g-0 bg-primary-op">
         <div class="hero-static col-md-6 d-flex align-items-center bg-body-extra-light">
             <div class="p-3 w-100">

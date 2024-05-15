@@ -1,19 +1,16 @@
 <?php
-
-class Document extends Controller
-{
+class Document extends Controller {
     public $DocumentModel;
-    function __construct()
-    {
+
+    function __construct() {
         $this->DocumentModel = $this->model('DocumentModel');
         parent::__construct();
-        require_once "./mvc/core/Pagination.php";
     }
 
-    public function default()
-    {
-        if(AuthCore::checkPermission("document","view")) {
-            $this->view("main_layout",[
+    public function default() {
+        if (AuthCore::checkPermission("document", "view")) {
+            $documents = $this->DocumentModel->getAllDocuments();
+            $this->view("main_layout", [
                 "Page" => "document",
                 "Title" => "Tài liệu giảng dạy",
                 "Plugin" => [
@@ -26,7 +23,37 @@ class Document extends Controller
                 ],
                 "Script" => "document",
                 "user_id" => $_SESSION['user_id'],
-            ]); 
-        } else $this->view("single_layout", ["Page" => "error/page_403","Title" => "Lỗi !"]);
+                "documents" => $documents
+            ]);
+        } else {
+            $this->view("single_layout", ["Page" => "error/page_403", "Title" => "Lỗi !"]);
+        }
+    }
+
+    public function upload() {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $subject = $_POST['subject'];
+            $type = $_POST['type'];
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+            $file = $_FILES['file'];
+
+            if ($this->DocumentModel->uploadDocument($subject, $type, $title, $description, $file)) {
+                header("Location: /Document");
+            } else {
+                echo "Error uploading file";
+            }
+        }
+    }
+
+    public function download($id) {
+        $document = $this->DocumentModel->getDocumentById($id);
+        if ($document) {
+            header("Content-Type: " . $document['type']);
+            echo $document['file_path'];
+        } else {
+            echo "File not found";
+        }
     }
 }
+?>

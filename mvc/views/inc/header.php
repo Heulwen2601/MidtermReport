@@ -6,12 +6,8 @@
         <div>
             <!-- Toggle Sidebar -->
             <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
-            <button type="button" class="btn btn-alt-secondary me-1 d-lg-none" data-toggle="layout"
-                data-action="sidebar_toggle">
-                <i class="fa fa-fw fa-bars"></i>
-            </button>
             <button type="button" class="btn btn-alt-secondary me-1 d-none d-lg-inline-block" data-toggle="layout" data-action="sidebar_mini_toggle">
-                <i class="fa fa-fw fa-ellipsis-v"></i>
+                <i class="fa fa-fw fa-bars"></i>
             </button>
             <!-- END Toggle Sidebar -->
         </div>

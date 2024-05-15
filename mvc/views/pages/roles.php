@@ -203,6 +203,13 @@
                                     <input class="form-check-input" type="checkbox" name="thongbao" value="delete">
                                 </td>
                             </tr>
+                            </tr>
+                            <tr>
+                                <td>Tài liệu giảng dạy</td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" name="document" value="view">
+                                </td>
+                            </tr>
                             <!-- <tr>
                                 <td>Cài đặt</td>
                                 <td class="text-center">

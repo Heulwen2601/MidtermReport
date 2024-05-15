@@ -21,6 +21,8 @@ $GLOBALS['navbar'] = [
                 'url'   => 'client/test',
                 'role' => 'tgthi'
             ),
+
+
         ]
             ),
     array(
@@ -69,6 +71,13 @@ $GLOBALS['navbar'] = [
                 'url'   => 'teacher_announcement',
                 'role' => 'thongbao'
             ),
+            array(
+                'name'  => 'Tài liệu giảng dạy',
+                'icon'  => 'fa fa-book-open',
+                'url'   => 'document',
+                'role' => 'cauhoi'
+            ),
+
         ]
     ),
     array(

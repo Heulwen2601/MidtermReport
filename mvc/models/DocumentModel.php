@@ -2,7 +2,7 @@
 class DocumentModel extends DB {
 
     public function getAllDocuments() {
-        $sql = "SELECT id, subject, type, title, description, uploaded_at FROM documents";
+        $sql = "SELECT id, subject, type, title, description, file_path, uploaded_at FROM documents";
         $result = mysqli_query($this->con, $sql);
         $documents = [];
         while ($row = mysqli_fetch_assoc($result)) {

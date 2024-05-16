@@ -7,10 +7,10 @@
             <!-- Logo -->
             <a class="fw-semibold text-white tracking-wide" href="./">
                 <span class="smini-visible">
-                    <span class="opacity-75">TDTU</span>
+                    TDT
                 </span>
                 <span class="smini-hidden">
-                    <span class="opacity-75">TDTU</span> Test
+                    TDT Support Lecture
                 </span>
             </a>
             <!-- END Logo -->

@@ -75,7 +75,7 @@ $GLOBALS['navbar'] = [
                 'name'  => 'Tài liệu giảng dạy',
                 'icon'  => 'fa fa-book-open',
                 'url'   => 'document',
-                'role' => 'cauhoi'
+                'role' => 'thongbao'
             ),
 
         ]

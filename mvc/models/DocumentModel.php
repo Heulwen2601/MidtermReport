@@ -1,8 +1,9 @@
 <?php
 class DocumentModel extends DB {
-
     public function getAllDocuments() {
-        $sql = "SELECT id, subject, type, title, description, uploaded_at FROM documents";
+        $sql = "SELECT d.id,d.mamonhoc, mh.tenmonhoc, d.title, d.filename, d.uploaded_at
+        FROM documents d
+        JOIN monhoc mh ON d.mamonhoc = mh.mamonhoc;";
         $result = mysqli_query($this->con, $sql);
         $documents = [];
         while ($row = mysqli_fetch_assoc($result)) {
@@ -11,21 +12,28 @@ class DocumentModel extends DB {
         return $documents;
     }
 
-    public function uploadDocument($subject, $type, $title, $description, $file) {
-        $filePath = mysqli_real_escape_string($this->con, file_get_contents($file['tmp_name']));
-        $sql = "INSERT INTO documents (subject, type, title, description, file_path) VALUES (?, ?, ?, ?, ?)";
-        $stmt = mysqli_prepare($this->con, $sql);
-        mysqli_stmt_bind_param($stmt, 'sssss', $subject, $type, $title, $description, $filePath);
-        return mysqli_stmt_execute($stmt);
-    }
-
     public function getDocumentById($id) {
-        $sql = "SELECT file_path, type FROM documents WHERE id = ?";
+        $sql = "SELECT filename FROM documents WHERE id = ?";
         $stmt = mysqli_prepare($this->con, $sql);
         mysqli_stmt_bind_param($stmt, 'i', $id);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         return mysqli_fetch_assoc($result);
+    }
+
+    public function getAllDocumentsBySubject($mamonhoc) {
+        $query = "SELECT * FROM documents WHERE mamonhoc = ?";
+        $stmt = $this->connect()->prepare($query);
+        $stmt->bind_param("i", $mamonhoc);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function uploadDocument($mamonhoc, $title, $filename) {
+        $query = "INSERT INTO documents (mamonhoc, title, filename) VALUES (?, ?, ?)";
+        $stmt = $this->connect()->prepare($query);
+        $stmt->bind_param("iss", $mamonhoc, $title, $filename);
+        return $stmt->execute();
     }
 }
 ?>

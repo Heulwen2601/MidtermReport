@@ -22,11 +22,11 @@ class MailAuth extends DB
         $this->mail->isSMTP(); // gửi mail SMTP
         $this->mail->Host = 'smtp.gmail.com'; // Set the SMTP server to send through
         $this->mail->SMTPAuth = true; // Enable SMTP authentication
-        $this->mail->Username = 'tsinh11111@gmail.com'; // SMTP username
-        $this->mail->Password = 'ojldjxeqzmdxznbh'; // SMTP password
+        $this->mail->Username = 'huyahhin2019@gmail.com'; // SMTP username
+        $this->mail->Password = 'tanw dast nlvf imhh'; // SMTP password
         $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
         $this->mail->Port = 587; // TCP port to connect to
-        $this->mail->setFrom('tsinh579@gmail.com', 'TDTU Test');
+        $this->mail->setFrom('itnqhuy@gmail.com', 'TDTU Test');
     }
 
     public function sendOpt($email,$opt)

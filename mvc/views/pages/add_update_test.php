@@ -4,7 +4,7 @@
 }
 </style>
 <form class="row g-0 flex-md-grow-1 form-taodethi">
-    <div class="col-md-4 col-lg-5 col-xl-3 order-md-1 bg-white">
+    <div class="col-md-3 col-lg-5 col-xl-3 order-md-1 bg-white">
         <div class="content px-2">
             <div class="d-md-none push">
                 <button type="button" class="btn w-100 btn-alt-primary" data-toggle="class-toggle"
@@ -16,11 +16,11 @@
                 <h3 class="fs-5">CẤU HÌNH</h3>
                 <div class="form-check form-switch mb-2">
                     <input class="form-check-input" type="checkbox" id="tudongsoande" name="tudongsoande" checked>
-                    <label class="form-check-label" for="tudongsoande">Tự động lấy từ ngân hàng đề</label>
+                    <label class="form-check-label" for="tudongsoande">Tạo đề tự động</label>
                 </div>
                 <div class="form-check form-switch mb-2">
                     <input class="form-check-input" type="checkbox" id="xemdiem" name="xemdiem">
-                    <label class="form-check-label" for="xemdiem">Xem điểm sau khi thi xong</label>
+                    <label class="form-check-label" for="xemdiem">Xem điểm khi thi xong</label>
                 </div>
                 <div class="form-check form-switch mb-2 d-none">
                     <input class="form-check-input" type="checkbox" id="xemda" name="xemda">
@@ -29,18 +29,6 @@
                 <div class="form-check form-switch mb-2">
                     <input class="form-check-input" type="checkbox" id="xembailam" name="xembailam">
                     <label class="form-check-label" for="xembailam">Xem bài làm khi thi xong</label>
-                </div>
-                <div class="form-check form-switch mb-2">
-                    <input class="form-check-input" type="checkbox" id="daocauhoi" name="daocauhoi">
-                    <label class="form-check-label" for="daocauhoi">Đảo câu hỏi</label>
-                </div>
-                <div class="form-check form-switch mb-2">
-                    <input class="form-check-input" type="checkbox" id="daodapan" name="daodapan">
-                    <label class="form-check-label" for="daodapan">Đảo đáp án</label>
-                </div>
-                <div class="form-check form-switch mb-2">
-                    <input class="form-check-input" type="checkbox" id="tudongnop" name="tudongnop">
-                    <label class="form-check-label" for="tudongnop">Tự động nộp bài khi chuyển tab</label>
                 </div>
             </div>
         </div>

@@ -2,6 +2,6 @@
 define("host_name", "localhost");
 define("db_user", "root");
 define("db_password", "123456");
-define("db_name", "tracnghiemonline1");
+define("db_name", "tracnghiemonline");
 define("app_path", "/Quanlythitracnghiem-main/");
 define("login_path", "http://localhost:8080/Quanlythitracnghiem-main/auth/signin");

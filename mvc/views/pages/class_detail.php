@@ -1,15 +1,6 @@
 <div class="content" data-id="<?php echo $data['Detail']['manhom'] ?>">
     <div class="row">
-        <div class="col-4 flex-grow-1">
-            <form action="#" id="search-form" onsubmit="return false;">
-                <div class="input-group">
-                    <span class="input-group-text bg-white"><i class="si si-magnifier"></i></span>
-                    <input type="text" class="form-control" placeholder="Tìm kiếm sinh viên..." id="search-input"
-                        name="search-input">
-                </div>
-            </form>
-        </div>
-        <div class="col-8 d-flex align-items-center justify-content-end gap-3">
+        <div class="col-12 d-flex align-items-center justify-content-end gap-3">
             <button type="button" class="btn btn-sm btn-primary" id="exportStudents"><i
                     class="fa-solid fa-file me-1"></i>Xuất danh sách
                 SV</button>
@@ -78,13 +69,6 @@
                                 Tham gia bằng mã mời
                             </button>
                         </li>
-                        <li class="nav-item">
-                            <button class="nav-link" id="them-file-excel-tab" data-bs-toggle="tab"
-                                data-bs-target="#them-file-excel" role="tab" aria-controls="them-file-excel"
-                                aria-selected="false">
-                                Thêm bằng file Excel
-                            </button>
-                        </li>
                         <li class="nav-item ms-auto">
                             <button type="button" class="btn btn-close p-3" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
@@ -125,7 +109,7 @@
                         </div>
                         <div class="tab-pane fade fade-up" id="ma-moi" role="tabpanel" aria-labelledby="ma-moi-tab"
                             tabindex="0">
-                            <h2 class="display-1 text-center py-6" id="show-ma-moi"></h2>
+                            <h5 class="display-1 text-center py-3" id="show-ma-moi"></h5>
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <p class="text-center mb-0">
                                 <?php echo $data['Detail']['mamonhoc'] . " - " . $data['Detail']['tenmonhoc'] . " - NH" . $data['Detail']['namhoc'] . " - HK" . $data['Detail']['hocky'] . " - " . $data['Detail']['tennhom'] ?>
@@ -133,33 +117,8 @@
                             <div>
                                 <button type="button" class="btn btn-alt-primary btn-sm btn-copy-code" data-bs-toggle="tooltip" data-bs-placement="top" title="Sao chép mã mời"><i
                                         class="fa fa-clipboard"></i></button>
-                                <button type="button" class="btn btn-alt-primary btn-sm btn-reset-invited-code"><i
-                                        class="fa fa-arrows-rotate me-1"></i>Tạo mã mới</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade fade-up" id="them-file-excel" role="tabpanel"
-                        aria-labelledby="them-file-excel-tab" tabindex="0">
-                        <form id="form-upload" method="POST" enctype="multipart/form-data">
-                            <div class="mb-4">
-                                <label for="user_password" class="form-label">Mật khẩu</label>
-                                <input type="password" class="form-control form-control-alt" name="user_password"
-                                    id="ps_user_group" placeholder="Nhập mật khẩu cho sinh viên!">
-                            </div>
-                            <div class="mb-4">
-                                <label class="form-label" for="js-ckeditor">Nội dung</label>
-                                <input class="form-control" type="file" id="file-cau-hoi" accept=".xlsx, .xls, .csv"
-                                    required>
-                            </div>
-                            <div class="mb-4">
-                                <em>Vui lòng soạn người dùng theo đúng định dạng. <a href="./public/filemau/danhsachsv.xls">Tải về file mẫu
-                                        Docx</a></em>
-                            </div>
-                            <div class="mb-4 d-flex justify-content-between">
-                                <button type="submit" class="btn btn-hero btn-primary" id="nhap-file"><i
-                                        class="fa fa-cloud-arrow-up"></i> Thêm vào hệ thống</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
 

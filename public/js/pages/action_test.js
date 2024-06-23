@@ -20,6 +20,24 @@ function getToTalQuestionOfChapter(chuong, monhoc, dokho) {
   return result;
 }
 
+function getTotalQuestionsByDifficulty(monhoc, dokho) {
+  var result = 0;
+  $.ajax({
+    url: "./question/getsoluongcauhoi",
+    type: "post",
+    data: {
+      monhoc: monhoc,
+      dokho: dokho,
+    },
+    async: false,
+    success: function (response) {
+      result = response;
+    },
+  });
+  return result;
+}
+
+
 function getMinutesBetweenDates(start, end) {
   // Chuyển đổi đối số thành đối tượng Date
   const startDate = new Date(start);
@@ -61,17 +79,20 @@ Dashmix.onLoad(() =>
       $.validator.addMethod(
         "validSoLuong",
         function (value, element, param) {
-          let c = $("#chuong").val() === undefined ? "" : $("#chuong").val();
-          let m =
-            $("#nhom-hp").val() == ""
-              ? 0
-              : groups[$("#nhom-hp").val()].mamonhoc;
-          let result =
-            parseInt(getToTalQuestionOfChapter(c, m, param)) >= parseInt(value);
+          let loaide = $("#tudongsoande").prop("checked") ? 1 : 0;
+          let m = $("#nhom-hp").val() == "" ? 0 : groups[$("#nhom-hp").val()].mamonhoc;
+          let result;
+          if (loaide == 1) { // Tạo đề tự động
+            let c = $("#chuong").val() === undefined ? "" : $("#chuong").val();
+            result = parseInt(getToTalQuestionOfChapter(c, m, param)) >= parseInt(value);
+          } else { // Tạo đề thủ công
+            result = parseInt(getTotalQuestionsByDifficulty(m, param)) >= parseInt(value);
+          }
           return result;
         },
         "Số lượng câu hỏi không đủ"
       );
+      
 
       $.validator.addMethod(
         "validThoigianthi",

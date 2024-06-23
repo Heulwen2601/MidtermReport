@@ -67,7 +67,7 @@
                                     data-class="animated fadeInLeft">
                                     <div class="text-center text-md-start">
                                         <h1 class="fw-bold fs-2 mb-3">
-                                            Hệ thống hỗ trợ giảng viên khoa CNTT
+                                            Hệ thống thi trắc nghiệm online
                                         </h1>
                                         <p class="text-muted fw-medium mb-4">
                                             Hệ thống hỗ trợ các chức năng như xem lịch giảng dạy, lưu lại thông tin về bài giảng, tài liệu môn học và thiết lập các nhắc nhở. Ngoài ra, bạn có thể tạo các bài thi trắc nghiệm online, lưu lại danh sách điểm danh sinh viên,...
@@ -231,16 +231,13 @@
             </div>
             <div class="bg-body-extra-light">
                 <div class="content content-full">
-                    <div class="pt-7 pb-5">
-                        <div class="position-relative">
-                            <h2 class="fw-bold mb-2 text-center invisible" data-toggle="appear" data-class="animated fadeInDown" data-offset="-200">
+                        <div class="row">
+                        <h2 class="fw-bold mb-2 text-center invisible" data-toggle="appear" data-class="animated fadeInDown" data-offset="-200">
                                 <span class="text-primary">Nhóm phát triển</span>
                             </h2>
                             <h3 class="h4 fw-medium text-muted text-center mb-5 invisible" data-toggle="appear" data-class="animated fadeInDown" data-offset="-200">
                                 Luôn sẵn sàng tiếp thu và thay đổi theo nhu cầu của bạn.
                             </h3>
-                        </div>
-                        <div class="row">
                             <div class="text-center slider-team">
                                 <div class="p-3 invisible" data-toggle="appear" data-class="animated flipInX">
                                     <a class="block block-rounded bg-gd-primary text-center"
@@ -289,84 +286,10 @@
                                 </div>
                                 
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
             <!-- END Section 2 -->
-
-            <!-- Section 3 -->
-            <div class="bg-body-light">
-                <div class="content content-full">
-                    <div class="py-4">
-                        <h2 class="fw-bold mb-2 text-center invisible" data-toggle="appear" data-class="animated fadeInDown" data-offset="-200">
-                            Nhận xét thực tế của <span class="text-primary">người dùng</span>
-                        </h2>
-                        <h3 class="h4 fw-medium text-muted text-center mb-5 invisible" data-toggle="appear" data-class="animated fadeInDown" data-offset="-200">
-                            Luôn đồng hành và mang lại các trải nghiệm tốt nhất cho người dùng.
-                        </h3>
-                    </div>
-                    <!-- Slider -->
-                    <div class="js-slider invisible" data-toggle="appear" data-class="animated bounceIn" data-offset="-200" data-timeout="400" data-dots="true" data-arrows="true"
-                        data-slides-to-show="1" data-autoplay="false">
-                        <div class="py-3">
-                            <blockquote class="blockquote">
-                                <p class="px-7 fs-5 text-justify mb-5">"TDTU Test là một hệ thống hỗ trợ cho các giảng viên khoa Công nghệ Thông tin, được thiết kế bởi các học sinh trong khoa. Đáp ứng đủ những yêu cầu cơ bản mà một giảng viên cần thiết."
-                                </p>
-                            </blockquote>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img class="img-avatar me-4" src="./public/media/avatars/thanhsang.jpg" alt="">
-                                <div class="d-flex flex-column align-items-start">
-                                    <div class="mt-2 fw-semibold fs-4">Nguyễn Văn A</div>
-                                    <div class="fs-sm text-muted fs-5">Giảng viên</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-3">
-                            <blockquote class="blockquote">
-                                <p class="px-7 fs-5 text-justify mb-5">"Giao diện của TDTU trực quan và dễ sử dụng, tính năng tùy chỉnh giao diện và phục vụ tương đối các tính năng cần thiết, đánh giá cao các tính năng lưu tài liệu giảng dạy theo từng môn học.</p>
-                            </blockquote>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img class="img-avatar me-4" src="./public/media/avatars/avatar0.jpg" alt="">
-                                <div class="d-flex flex-column align-items-start">
-                                    <div class="mt-2 fw-semibold fs-4">Nguyễn Văn B</div>
-                                    <div class="fs-sm text-muted fs-5">52200xxx</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-3">
-                            <blockquote class="blockquote">
-                                <p class="px-7 fs-5 text-justify mb-5">"TDTU Test đảm bảo an toàn và bảo mật thông tin của người dùng. Tôi rất hài lòng với trải nghiệm của mình khi sử dụng hệ thống này."
-                                </p>
-                            </blockquote>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img class="img-avatar me-4" src="./public/media/avatars/avatar0.jpg" alt="">
-                                <div class="d-flex flex-column align-items-start">
-                                    <div class="mt-2 fw-semibold fs-4">Trần Thị C</div>
-                                    <div class="fs-sm text-muted fs-5">52200xxx</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-3">
-                            <blockquote class="blockquote">
-                                <p class="px-7 fs-5 text-justify mb-5">Nhờ có TDTU Test mà tôi đã tiết kiệm được rất nhiều thời gian trong việc quản lý lớp học của mình. Việc soạn bài, tạo các đề thi để cho học sinh thi chưa bao giờ đơn giản đến thế. Đặc biệt các bạn tư vấn và hỗ trợ rất nhiệt tình khi mình gặp vướng mắc.
-                                </p>
-                            </blockquote>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img class="img-avatar me-4" src="./public/media/avatars/avatar0.jpg" alt="">
-                                <div class="d-flex flex-column align-items-start">
-                                    <div class="mt-2 fw-semibold fs-4">Trần Văn D</div>
-                                    <div class="fs-sm text-muted fs-5">52200xxx</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END Slider -->
-                </div>
-            </div>
-            <!-- END Section 3 -->
-        </main>
-        <!-- END Main Container -->
 
         <!-- Footer -->
         <footer id="page-footer" class="footer-static bg-body-extra-light">
@@ -391,6 +314,7 @@
                     <div class="col-md-4">
                         <h3 class="fw-semibold">Địa chỉ</h3>
                         <div class="fs-sm push">
+                            Phòng C0004, Khoa Công nghệ thông tin<br>
                             Trường Đại học Tôn Đức Thắng<br>
                             19 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh<br>
                         </div>
@@ -414,7 +338,7 @@
                 <!-- Footer Copyright -->
                 <div class="row fs-sm pt-4">
                     <div class="col-md-6 offset-md-3 text-center">
-                        Copyright © 2024 Azota.
+                        Copyright © 2024 TDTU.
                     </div>
                 </div>
                 <!-- END Footer Copyright -->

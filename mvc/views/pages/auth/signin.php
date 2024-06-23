@@ -14,7 +14,7 @@
                             <div class="py-3">
                                 <div class="mb-4">
                                     <input type="text" class="form-control form-control-lg form-control-alt"
-                                        id="login-username" name="login-username" placeholder="Mã sinh viên">
+                                        id="login-username" name="login-username" placeholder="Mã người dùng">
                                 </div>
                                 <div class="mb-4">
                                     <input type="password" class="form-control form-control-lg form-control-alt"
@@ -28,28 +28,19 @@
                                 <!-- <a class="btn btn-alt-secondary me-1 my-3 w-100" href="<?php echo $data["authUrl"]?>">
                                     <img alt="Logo" src="./public/media/svg/google-icon.svg"
                                         style="height:15px;margin-right:20px">Đăng nhập với Google</a> -->
-                                <p class="mt-3 mb-0 d-lg-flex justify-content-lg-between">
-                                    <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"
-                                        href="./auth/recover">
-                                        <i class="fa fa-exclamation-triangle opacity-50 me-1"></i> Quên mật khẩu
-                                    </a>
-                                    <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1" href="#">
-                                        <i class="fa fa-plus opacity-50 me-1"></i> New Account
-                                    </a>
-                                </p>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center">
+        <div class="hero-static col-md-6 d-md-flex align-items-md-center justify-content-md-center text-md-center">
             <div class="p-3">
                 <p class="display-4 fw-bold text-white mb-3">
                     Welcome to the TDTU Test
                 </p>
                 <p class="fs-lg fw-semibold text-white-75 mb-0">
-                    Copyright &copy; <span data-toggle="year-copy"></span>
+                    Copyright &copy;<span data-toggle="year-copy"></span>
                 </p>
             </div>
         </div>

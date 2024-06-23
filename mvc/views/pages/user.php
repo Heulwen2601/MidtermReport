@@ -7,27 +7,6 @@
                     data-bs-target="#modal-add-user" id="btn-and" data-role="nguoidung" data-action="create">Thêm người dùng</button>
             </div>
         </div>
-        <div class="block-content bg-body-dark">
-            <form action="#" id="search-form" onsubmit="return false;">
-                <div class="row mb-4">
-                    <div class="input-group">
-                        <div class="col-md-6 d-flex gap-3">
-                            <button class="btn btn-alt-secondary dropdown-toggle btn-filtered-by-role" id="dropdown-filter-role" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tất cả</button>
-                            <ul class="dropdown-menu mt-1" aria-labelledby="dropdown-filter-role">
-                                <li><a class="dropdown-item filtered-by-role" href="javascript:void(0)" data-id="0">Tất cả</a></li>
-                                <?php
-                                    foreach ($data["Roles"] as $role) {
-                                        echo '<li><a class="dropdown-item filtered-by-role" href="javascript:void(0)" data-id="'.$role['manhomquyen'].'">'.$role['tennhomquyen'].'</a></li>';
-                                    }
-                                ?>
-                            </ul>
-                            <input type="text" class="form-control form-control-alt" id="search-input" name="search-input"
-                            placeholder="Tìm kiếm người dùng...">
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
         <div class="block-content">
             <div class="table-responsive" id="get_user">
                 <table class="table table-vcenter">
@@ -63,14 +42,7 @@
                             <button class="nav-link active" id="btabs-static-home-tab" data-bs-toggle="tab"
                                 data-bs-target="#btabs-static-home" role="tab" aria-controls="btabs-static-home"
                                 aria-selected="true">
-                                Thêm thủ công
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" id="btabs-static-profile-tab" data-bs-toggle="tab"
-                                data-bs-target="#btabs-static-profile" role="tab" aria-controls="btabs-static-profile"
-                                aria-selected="false">
-                                Thêm từ file
+                                Thêm người dùng
                             </button>
                         </li>
                         <li class="nav-item ms-auto">

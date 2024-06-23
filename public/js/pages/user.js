@@ -71,7 +71,7 @@ const showData = function (users) {
                           <td class="text-center">
                               <strong>${user.id}</strong>
                           </td>
-                          <td class="fs-sm d-flex align-items-center">
+                          <td class="fs-sm d-flex align-items-center" style ="min-height: 100px">
                               <img class="img-avatar img-avatar48 me-3" src="./public/media/avatars/${user.avatar == null ? `avatar2.jpg`: user.avatar}" alt="">
                               <div class="d-flex flex-column">
                                   <strong class="text-primary">${
@@ -100,13 +100,13 @@ const showData = function (users) {
                           <td class="text-center col-action">
                               <a data-role="nguoidung" data-action="update" class="btn btn-sm btn-alt-secondary user-edit" href="javascript:void(0)"
                               data-bs-toggle="tooltip" aria-label="Chỉnh sửa" data-bs-original-title="Chỉnh sửa" data-id="${user.id}">
-                                  <i class="fa fa-fw fa-pencil"></i>
+                                  <i class="">Sửa</i>
                               </a>
                               <a data-role="nguoidung" data-action="delete" class="btn btn-sm btn-alt-secondary user-delete" href="javascript:void(0)" data-bs-toggle="tooltip"
                                   aria-label="Xoá" data-bs-original-title="Xoá" data-id="${
                                     user.id
                                   }">
-                                  <i class="fa fa-fw fa-times"></i>
+                                  <i class="">Xóa</i>
                               </a>
                           </td>
                       </tr>

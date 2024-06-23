@@ -31,18 +31,6 @@ function showData(data) {
         }</td>
         <td class="text-center">${formattedTime}</td>
         <td class="text-center">${Element["solanchuyentab"] || 0}</td>
-        <td class="text-center">
-            <a class="btn btn-sm btn-alt-secondary show-exam-detail" href="javascript:void(0)" data-bs-toggle="tooltip" aria-label="Xem chi tiết" data-bs-original-title="Xem chi tiết" data-id="${
-              Element["makq"] || ""
-            }">
-                <i class="fa fa-fw fa-eye"></i>
-            </a>
-            <a class="btn btn-sm btn-alt-secondary print-pdf" href="javascript:void(0)" data-bs-toggle="tooltip" aria-label="In bài làm" data-bs-original-title="In bài làm" data-id="${
-              Element["makq"] || ""
-            }">
-                <i class="fa fa-fw fa-print"></i>
-            </a>
-        </td>
     </tr>`;
   });
   $("#took_the_exam").html(html);

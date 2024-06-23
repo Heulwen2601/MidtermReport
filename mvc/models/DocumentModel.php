@@ -1,13 +1,9 @@
 <?php
 class DocumentModel extends DB {
     public function getAllDocuments() {
-<<<<<<< HEAD
         $sql = "SELECT d.id,d.mamonhoc, mh.tenmonhoc, d.title, d.filename, d.uploaded_at
         FROM documents d
         JOIN monhoc mh ON d.mamonhoc = mh.mamonhoc;";
-=======
-        $sql = "SELECT id, subject, type, title, description, file_path, uploaded_at FROM documents";
->>>>>>> 77d14c4a44040fe40141aa2d30e72f226baf5708
         $result = mysqli_query($this->con, $sql);
         $documents = [];
         while ($row = mysqli_fetch_assoc($result)) {

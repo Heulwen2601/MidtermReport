@@ -93,17 +93,7 @@ $(document).ready(function () {
                     <div class="row">`;
                 item.nhom.forEach((nhom_item) => {
                     let btn_hide = "";
-                    if (nhom_item.hienthi == 1) {
-                        btn_hide = `<a class="nav-main-link dropdown-item btn-hide-group" href="javascript:void(0)" data-id="${nhom_item.manhom}">
-                            <i class="nav-main-link-icon si si-eye me-2 text-dark"></i>
-                            <span class="nav-main-link-name fw-normal">Ẩn nhóm</span>
-                        </a>`
-                    } else {
-                        btn_hide = `<a class="nav-main-link dropdown-item btn-unhide-group" href="javascript:void(0)" data-id="${nhom_item.manhom}">
-                            <i class="nav-main-link-icon si si-action-undo me-2 text-dark"></i>
-                            <span class="nav-main-link-name fw-normal">Khôi phục</span>
-                        </a>`;
-                    }
+
                     html += `
                         <div class="col-sm-6 col-lg-6 col-xl-3">
                         <div class="block block-rounded">

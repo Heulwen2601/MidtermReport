@@ -1,6 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
-require_once 'vendor/phpoffice/phpexcel/Classes/PHPExcel/IOFactory.php';
+
 use Dompdf\Dompdf;
 use Sabberworm\CSS\Value\Size;
 
@@ -440,7 +439,7 @@ class Test extends Controller
             <table style="width:100%">
                 <tr>
                     <td style="text-align: center;font-weight:bold">
-                        TRƯỜNG ĐẠI HỌC SÀI GÒN<br>
+                        TRƯỜNG ĐẠI HỌC TÔN ĐỨC THẮNG<br>
                         KHOA CÔNG NGHỆ THÔNG TIN<br><br><br>
                     </td>
                     <td style="text-align: center;">
@@ -464,16 +463,6 @@ class Test extends Controller
             <hr>
             <div style="margin-top:20px">
         ';
-        foreach ($cauHoi as $index => $ch) {
-            $html .= '<li style="list-style:none"><strong>Câu ' . ($index + 1) . '</strong>: ' . $ch['noidung'] . '<ol type="A" style="margin-left:30px">';
-            foreach ($ch['cautraloi'] as $ctl) {
-                $dapAn = $ctl['ladapan'] == "1" ? " (Đáp án chính xác)" : "";
-                $dapAnChon = $ctl['macautl'] == $ch['dapanchon'] ? " (Đáp án chọn)" : "";
-                $html .= '<li>' . $ctl['noidungtl'] . $dapAnChon . $dapAn . '</li>';
-            }
-
-            $html .= '</ol></li>';
-        }
 
         $html .= '
         </div>
@@ -489,148 +478,6 @@ class Test extends Controller
         $dompdf->render();
         $output = $dompdf->output();
         echo base64_encode($output);
-    }
-
-    public function exportExcel()
-    {
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $made = $_POST['made'];
-            $manhom = $_POST['manhom'];
-            $ds = $_POST['ds'];
-            $result = $this->ketquamodel->getTestScoreGroup($made,$manhom);
-            if($manhom == 0){
-                $result = $this->ketquamodel->getTestAll($made,$ds);
-            }
-            //Khởi tạo đối tượng
-            $excel = new PHPExcel();
-            //Chọn trang cần ghi (là số từ 0->n)
-            $excel->setActiveSheetIndex(0);
-            //Tạo tiêu đề cho trang. (có thể không cần)
-            $excel->getActiveSheet()->setTitle("Danh sách kết quả");
-
-            //Xét chiều rộng cho từng, nếu muốn set height thì dùng setRowHeight()
-            $excel->getActiveSheet()->getColumnDimension('A')->setWidth(15);
-            $excel->getActiveSheet()->getColumnDimension('B')->setWidth(30);
-            $excel->getActiveSheet()->getColumnDimension('C')->setWidth(10);
-            $excel->getActiveSheet()->getColumnDimension('D')->setWidth(20);
-            $excel->getActiveSheet()->getColumnDimension('E')->setWidth(20);
-            $excel->getActiveSheet()->getColumnDimension('F')->setWidth(20);
-
-
-            //Xét in đậm cho khoảng cột
-            $phpColor = new PHPExcel_Style_Color();
-            $phpColor->setRGB('FFFFFF'); 
-            $excel->getActiveSheet()->getStyle('A1:G1')->getFont()->setBold(true);
-            $excel->getActiveSheet()->getStyle('A1:G1')->getFont()->setColor( $phpColor );
-            $excel->getActiveSheet()->getStyle('A1:G1')->applyFromArray(
-                array(
-                    'fill' => array(
-                        'type' => PHPExcel_Style_Fill::FILL_SOLID,
-                        'color' => array('rgb' => '33FF33')
-                    )
-                )
-            );
-            $excel->getActiveSheet()->getStyle('A1:G1')->getAlignment()->applyFromArray(
-                array('horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_CENTER,)
-            );
-            $excel->getActiveSheet()->setCellValue('A1', 'MSSV');
-            $excel->getActiveSheet()->setCellValue('B1', 'Họ và tên');
-            $excel->getActiveSheet()->setCellValue('C1', 'Điểm thi');
-            $excel->getActiveSheet()->setCellValue('D1', 'Thời gian vào thi');
-            $excel->getActiveSheet()->setCellValue('E1', 'Thời gian làm bài');
-            $excel->getActiveSheet()->setCellValue('F1', 'Số câu đúng');
-            $excel->getActiveSheet()->setCellValue('G1', 'Số lần chuyển Tab');
-            // thực hiện thêm dữ liệu vào từng ô bằng vòng lặp
-            // dòng bắt đầu = 2
-            $numRow = 2;
-            foreach ($result as $row) {
-                $excel->getActiveSheet()->setCellValue('A' . $numRow, $row["manguoidung"]);
-                $excel->getActiveSheet()->setCellValue('B' . $numRow, $row["hoten"]);
-                $excel->getActiveSheet()->setCellValue('C' . $numRow, $row["diemthi"]==""?"0":$row["diemthi"]);
-                $excel->getActiveSheet()->setCellValue('D' . $numRow, $row["thoigianvaothi"]==""?"0":$row["thoigianvaothi"]);
-                $excel->getActiveSheet()->setCellValue('E' . $numRow, $row["thoigianlambai"]==""?"0":$row["thoigianlambai"]);
-                $excel->getActiveSheet()->setCellValue('F' . $numRow, $row["socaudung"]==""?"0":$row["socaudung"]);
-                $excel->getActiveSheet()->setCellValue('G' . $numRow, $row["solanchuyentab"]==""?"0":$row["solanchuyentab"]);
-                $excel->getActiveSheet()->getStyle("A".$numRow.":G"."$numRow")->getAlignment()->applyFromArray(
-                    array('horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_CENTER,)
-                );;
-                $numRow++;
-            }
-            ob_start();
-            $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
-            $write->save('php://output');
-            $xlsData = ob_get_contents();
-            ob_end_clean();
-            $response =  array(
-                'status' => TRUE,
-                'file' => "data:application/vnd.ms-excel;base64,".base64_encode($xlsData)
-            );
-        
-            die(json_encode($response));
-        }
-    }
-
-    public function getMarkOfAllTest()
-    {
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $manhom = $_POST['manhom'];
-        $result = $this->ketquamodel->getMarkOfAllTest($manhom);
-        $excel = new PHPExcel();
-        //Chọn trang cần ghi (là số từ 0->n)
-        $excel->setActiveSheetIndex(0);
-        //Tạo tiêu đề cho trang. (có thể không cần)
-        $excel->getActiveSheet()->setTitle("Danh sách kết quả");
-
-        //Xét chiều rộng cho từng, nếu muốn set height thì dùng setRowHeight()
-        $end = $this->toAlpha(count($result[0])-1);
-        for($x = 0; $x < count($result[0]); $x++) {
-            $excel->getActiveSheet()->getColumnDimension($this->toAlpha($x))->setWidth(25);
-        }
-        //Xét in đậm cho khoảng cột
-        $phpColor = new PHPExcel_Style_Color();
-        $phpColor->setRGB('FFFFFF'); 
-        $excel->getActiveSheet()->getStyle("A1:".($end)."1")->getFont()->setBold(true);
-        $excel->getActiveSheet()->getStyle("A1:".($end)."1")->getFont()->setColor( $phpColor );
-        $excel->getActiveSheet()->getStyle("A1:".($end)."1")->applyFromArray(
-            array(
-                'fill' => array(
-                    'type' => PHPExcel_Style_Fill::FILL_SOLID,
-                    'color' => array('rgb' => '33FF33')
-                )
-            )
-        );
-        
-        $excel->getActiveSheet()->getStyle("A1:".($end)."1")->getAlignment()->applyFromArray(
-            array('horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_CENTER,)
-        );
-
-        for($x = 0; $x <count($result[0]); $x++) {
-            $excel->getActiveSheet()->setCellValue($this->toAlpha($x)."1", $result[0][$x]);
-        }
-
-        // thực hiện thêm dữ liệu vào từng ô bằng vòng lặp
-        // dòng bắt đầu = 2
-        $numRow = 2;
-        for($x=1; $x<count($result); $x++){
-            for($y=0;$y<count($result[$x]);$y++){
-                $excel->getActiveSheet()->setCellValue($this->toAlpha($y) . $numRow, $result[$x][$y]==""?"0":$result[$x][$y]);
-            }
-            $excel->getActiveSheet()->getStyle("A".$numRow.":G"."$numRow")->getAlignment()->applyFromArray(
-                array('horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_CENTER,)
-            );;
-            $numRow++;
-        }
-        ob_start();
-        $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
-        $write->save('php://output');
-        $xlsData = ob_get_contents();
-        ob_end_clean();
-        $response =  array(
-            'status' => TRUE,
-            'file' => "data:application/vnd.ms-excel;base64,".base64_encode($xlsData)
-        );
-        die(json_encode($response));
-        }
     }
 
     function toAlpha($num){

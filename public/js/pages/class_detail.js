@@ -7,7 +7,7 @@ Dashmix.onLoad((() => class {
         "mssv": {
           required: !0,
           digits: true,
-          minlength: 10
+          minlength: 8
         },
         "hoten": {
           required: !0,
@@ -21,7 +21,7 @@ Dashmix.onLoad((() => class {
         "mssv": {
           required: "Vui lòng nhập mã sinh viên của bạn",
           digits: "Mã sinh viên phải là các ký tự số",
-          minlength: "Mã số sinh viên ít nhất 10 ký tự"
+          minlength: "Mã số sinh viên ít nhất 8 ký tự"
         },
         "hoten": {
           required: "Cung cấp đầy đủ họ tên",

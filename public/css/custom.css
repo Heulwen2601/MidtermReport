@@ -277,3 +277,12 @@ td p {
 .truncate--6 {
     -webkit-line-clamp: 6;
 }
+
+.news-thumbnail {
+    margin-bottom: 10px; /* Điều chỉnh khoảng cách giữa các thumbnail tin tức */
+}
+
+.news-title {
+    margin-bottom: 5px; /* Điều chỉnh khoảng cách giữa tiêu đề và nội dung tin tức */
+}
+

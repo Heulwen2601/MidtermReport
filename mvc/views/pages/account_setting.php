@@ -46,9 +46,7 @@
                 tabindex="0">
                 <div class="row push p-sm-2 p-lg-4">
                     <div class="offset-xl-1 col-xl-4 order-xl-1">
-                        <p class="bg-body-light p-4 rounded-3 text-muted fs-sm">
-                            Your account’s vital info. Your username will be publicly visible.
-                        </p>
+
                     </div>
                     <div class="col-xl-6 order-xl-0">
                         <form class="form-update-profile" method="POST" enctype="multipart/form-data">
@@ -108,11 +106,7 @@
             <div class="tab-pane" id="account-password" role="tabpanel" aria-labelledby="account-password-tab"
                 tabindex="0">
                 <div class="row push p-sm-2 p-lg-4">
-                    <div class="offset-xl-1 col-xl-4 order-xl-1">
-                        <p class="bg-body-light p-4 rounded-3 text-muted fs-sm">
-                            Changing your sign in password is an easy way to keep your account secure.
-                        </p>
-                    </div>
+
                     <div class="col-xl-6 order-xl-0">
                         <form onsubmit="return false;" class="form-change-password">
                             <div class="mb-4">

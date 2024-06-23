@@ -79,11 +79,11 @@ $(document).ready(function () {
                     <td class="text-center fs-sm">${item.soluong}</td>
                     <td class="text-center col-action">
                         <button data-role="nhomquyen" data-action="update" class="btn btn-sm btn-alt-secondary btn-show-update" data-id="${item.manhomquyen}" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit">
-                            <i class="fa fa-fw fa-pencil"></i>
+                            Sửa
                         </button>
                         <button data-role="nhomquyen" data-action="delete" class="btn btn-sm btn-alt-secondary delete_roles" data-id="${item.manhomquyen}" data-bs-toggle="tooltip" aria-label="Delete"
                             data-bs-original-title="Delete">
-                            <i class="fa fa-fw fa-times"></i>
+                            Xóa
                         </button>
                     </td>
                 </tr>`
@@ -114,15 +114,15 @@ $(document).ready(function () {
         let id = $(this).data('id');
         let index = $(this).data("index");
         e.fire({
-            title: "Are you sure?",
-            text: "Bạn có chắc chắn muốn xoá đề thi?",
+            title: "Xác nhận xoá nhóm quyền?",
+            text: "",
             icon: "warning",
             showCancelButton: !0,
             customClass: {
                 confirmButton: "btn btn-danger m-1",
                 cancelButton: "btn btn-secondary m-1",
             },
-            confirmButtonText: "Vâng, tôi chắc chắn!",
+            confirmButtonText: "Xác nhận!",
             html: !1,
             preConfirm: (e) =>
                 new Promise((e) => {

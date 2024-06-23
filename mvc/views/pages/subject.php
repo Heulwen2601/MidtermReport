@@ -9,17 +9,6 @@
             </div>
         </div>
         <div class="block-content">
-            <form action="#" id="search-form" onsubmit="return false;">
-                <div class="mb-4">
-                    <div class="input-group">
-                        <input type="text" class="form-control form-control-alt" id="search-input" name="search-input"
-                            placeholder="Tìm kiếm môn học...">
-                        <button class="input-group-text bg-body border-0 btn-search">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
             <div class="table-responsive">
                 <table class="table table-vcenter">
                     <thead>

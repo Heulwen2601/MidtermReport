@@ -5,12 +5,6 @@
         <div>
             <img class="img-fluid" src="./public/media/photos/dhtdt_1.jpg" alt="">
         </div>
-        <div>
-            <h5></h5>
-        </div>
-        <div>
-            <img class="img-fluid" src="./public/media/photos/dhtdt_3.jpg" alt="">
-        </div>
     </div>
     <div>
         <h1></h1>

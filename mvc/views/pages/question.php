@@ -34,22 +34,13 @@
                         </select>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control form-control-alt" id="search-input" name="search-input"
-                            placeholder="Nội dung câu hỏi...">
-                        <button class="input-group-text bg-body border-0 btn-search">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-                </div>
             </form>
             <div class="table-responsive">
                 <table class="table table-vcenter">
                     <thead>
                         <tr>
                             <th class="text-center" style="width: 100px;">ID</th>
-                            <th style="width: 700px;">Nội dung câu hỏi</th>
+                            <th style="width: 600px;">Nội dung câu hỏi</th>
                             <th class="d-none d-sm-table-cell">Môn học</th>
                             <th class="d-none d-xl-table-cell">Độ khó</th>
                             <th class="text-center col-header-action">Hành động</th>
@@ -72,14 +63,7 @@
                     <button class="nav-link active" id="btabs-alt-static-home-tab" data-bs-toggle="tab"
                         data-bs-target="#btabs-alt-static-home" role="tab" aria-controls="btabs-alt-static-home"
                         aria-selected="true">
-                        Thêm thủ công
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" id="btabs-alt-static-profile-tab" data-bs-toggle="tab"
-                        data-bs-target="#btabs-alt-static-profile" role="tab" aria-controls="btabs-alt-static-profile"
-                        aria-selected="false">
-                        Thêm từ file
+                        Thêm câu hỏi mới
                     </button>
                 </li>
                 <li class="nav-item ms-auto">

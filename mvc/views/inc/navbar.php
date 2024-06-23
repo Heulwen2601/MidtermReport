@@ -10,7 +10,7 @@
                     TDT
                 </span>
                 <span class="smini-hidden">
-                    TDT Support Lecture
+                    TDT Test
                 </span>
             </a>
             <!-- END Logo -->

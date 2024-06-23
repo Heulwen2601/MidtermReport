@@ -10,17 +10,6 @@
         <div class="block-content">
             <div class="row justify-content-center">
                 <div class="col-md-11">
-                    <form action="be_pages_ecom_orders.html" method="POST" onsubmit="return false;">
-                        <div class="mb-4">
-                            <div class="input-group">
-                                <input type="text" class="form-control form-control-alt" id="one-ecom-orders-search"
-                                    name="one-ecom-orders-search" placeholder="Tìm kiếm nhóm quyền..">
-                                <span class="input-group-text bg-body border-0">
-                                    <i class="fa fa-search"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </form>
                     <div class="table-responsive">
                         <table class="table table-vcenter">
                             <thead>
@@ -203,13 +192,23 @@
                                     <input class="form-check-input" type="checkbox" name="thongbao" value="delete">
                                 </td>
                             </tr>
-                            </tr>
                             <tr>
                                 <td>Tài liệu giảng dạy</td>
                                 <td class="text-center">
                                     <input class="form-check-input" type="checkbox" name="document" value="view">
                                 </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" name="document" value="create">
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" name="document" value="update">
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-check-input" type="checkbox" name="document" value="delete">
+                                </td>
                             </tr>
+                            </tr>
+                            
                             <!-- <tr>
                                 <td>Cài đặt</td>
                                 <td class="text-center">

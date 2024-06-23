@@ -2,11 +2,13 @@
 class KetQuaModel extends DB{
     public function start($made, $manguoidung)
     {
-        $valid = true;
-        $sql = "INSERT INTO `ketqua`(`made`, `manguoidung`) VALUES ('$made','$manguoidung')";
+        $sql = "INSERT INTO `ketqua`(`made`, `manguoidung`) VALUES ('$made','$manguoidung') 
+                ON DUPLICATE KEY UPDATE `made` = VALUES(`made`), `manguoidung` = VALUES(`manguoidung`)";
         $result = mysqli_query($this->con, $sql);
-        if(!$result) $valid = false;
-        return $valid;
+        if (!$result) {
+            return false;
+        }
+        return true;
     }
 
     public function updateChangeTab($made, $manguoidung)

@@ -4,7 +4,6 @@ class App{
     protected $action="default";
     protected $params=[];
     
-
     function __construct(){
         $arr = $this->UrlProcess();
         // Controller

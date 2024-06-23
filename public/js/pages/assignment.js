@@ -53,7 +53,7 @@ function showAssignment(data) {
         </td>
         <td class="text-center col-action">
             <a data-role="phancong" data-action="delete" class="btn btn-sm btn-alt-secondary btn-delete-assignment" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete" data-id="${element['manguoidung']}">
-                <i class="fa fa-fw fa-times"></i>
+                <i class="">Xóa</i>
             </a>
         </td>
     </tr>`
@@ -233,15 +233,15 @@ $(document).ready(function(){
         });
     
         e.fire({
-            title: "Are you sure?",
-            text: "Bạn có chắc chắn muốn xoá phân công?",
+            title: "Xác nhận xoá phân công?",
+            text: "",
             icon: "warning",
             showCancelButton: !0,
             customClass: {
                 confirmButton: "btn btn-danger m-1",
                 cancelButton: "btn btn-secondary m-1"
             },
-            confirmButtonText: "Vâng, tôi chắc chắn!",
+            confirmButtonText: "Xác nhận",
             html: !1,
             preConfirm: e => new Promise((e => {
                 setTimeout((() => {

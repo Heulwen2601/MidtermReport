@@ -57,28 +57,26 @@ Cho phép người dùng tạo các câu hỏi cho từng chương của môn h�
 
 <h4 align="center">Câu hỏi</h4>
 
-![Giao diện thêm câu hỏi](./img/themcauhoi.png)
+![Giao diện tạo đề kiểm tra](./img/TaoDeThi.png)
 
 <h4 align="center">Đề kiểm tra</h4>
 
-![Giao diện tạo đề kiểm tra](./img/TaoDeThi.png)
+![Giao diện tham gia thi](./img/ThamGiaThi.png)
 
 <h4 align="center">Tham gia thi</h4>
 
-![Giao diện tham gia thi](./img/ThamGiaThi.png)
+![Giao diện nhóm học phần](./img/QuanLyNhomHP.png)
 
 <h4 align="center">Nhóm học phần</h4>
 
-![Giao diện nhóm học phần](./img/QuanLyNhomHP.png)
+![Giao diện phân công giảng dạy](./img/PhanCong.png)
 
 <h4 align="center">Phân công</h4>
 
-![Giao diện phân công giảng dạy](./img/PhanCong.png)
+![Giao diện quản lý người dùng](./img/NguoiDung.png)
 
 <h4 align="center">Người dùng</h4>
 
-![Giao diện quản lý người dùng](./img/NguoiDung.png)
+![Giao diện thông báo](./img/ThongBao.png)
 
 <h4 align="center">Thông báo</h4>
-
-![Giao diện thông báo](./img/ThongBao.png)

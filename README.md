@@ -73,7 +73,7 @@ Cho phép người dùng tạo các câu hỏi cho từng chương của môn h�
 
 <h4 align="center">Phân công</h4>
 
-![Giao diện quản lý người dùng](./img/NguoiDung.png)
+![Giao diện quản lý người dùng](./img/QuanLyNguoiDung.png)
 
 <h4 align="center">Người dùng</h4>
 
